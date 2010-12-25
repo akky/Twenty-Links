@@ -24,15 +24,20 @@
 	</p>
 <?php } ?>
 
-<?php if (!is_tag()) { ?>
-	<div id="tag-trail"><h1 class="page-title"><?php _e("tag filter:"); ?></h1>
+<div id="tag-trail">
+	<?php if (!is_tag()) { ?>
+		<h1 class="page-title"><?php _e("tag filter:"); ?></h1>
+	<?php } ?>
+	
+	<form id="tag-filter" action="<?php echo $action; ?>" method=="GET">
+		<input type="text" name="tag" id="tag" />
+	</form>
+</div><!-- # tag-trail -->
+
+<?php if (current_user_can('edit_posts')) { ?>
+
 <?php } ?>
 
-<form id="tag-filter" action="<?php echo $action; ?>" method=="GET">
-<input type="text" name="tag" id="tag" />	
-</form>
-
-</div><!-- # tag-trail -->
 
 <?php $first = TRUE; ?>
 <?php /* Display navigation to next/previous pages when applicable */ ?>

@@ -26,7 +26,7 @@ get_header(); ?>
 					
 					echo $tagtitle;
 					?></h1>
-				
+				</div>
 
 <?php
 /* Run the loop for the tag archive to output the posts
