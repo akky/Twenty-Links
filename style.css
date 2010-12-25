@@ -1,0 +1,44 @@
+/*
+Theme Name: Twenty Links
+Theme URI: http://sillybean.net/
+Description: A linky child theme for Twenty Ten
+Author: Steph, updates by Aaron Parecki
+Template: twentyten
+Version: 0.3.1
+License: GPL
+*/
+@import url(../twentyten/style.css);
+
+/* General Page Stuff */
+#content { font: 12px/1.6 Arial; margin-left: 0; }
+#branding img, div#access { display: none; }
+#branding { overflow: auto; border-bottom: 2px solid #000; }
+
+/* Deleted Post Notice */
+p.notice { border: 1px solid #fc0; background: #ffd; color: #f90; font-weight: bold; padding: 1em; }
+
+/* Tag Breadcrumb Trail and Search Input */
+#tag-trail { background: #ededed; padding-left: .5em; }
+#tag-trail h1.page-title { /* color: #fff; */ }
+#tag-trail h1.page-title, #content form#tag-filter { display: inline; }
+#content form#tag-filter input { margin: 1em; font: 11px/1.2 Arial; display: inline; }
+#tag-trail h1 a.remove-tag { font-weight: normal; margin-right: 1em; }
+
+/* Posts */
+div.day { border-top: 1px solid #ccc; overflow: auto; padding: 0; margin-bottom: -1px; position: relative; }
+#content h2.date { position: absolute; width: 70px; font-size: .9em; clear: both; color: #aaa; text-transform: uppercase; margin: 0; padding: 1em 0 0; line-height: 2.3em; }
+div.post, div.bookmark { float: left; clear: left; width: 574px; position: relative; left: 80px; border-bottom: 1px solid #ccc; padding-bottom: 8px; }
+div.post.status-private, div.bookmark.status-private { background: #f9f9f9; }
+.hentry { margin: 0; }
+div.entry-content { /*margin: 1em 0 -1em;*/ padding: 0; line-height: 2em; }
+div.entry-content a.title { font-size: 1.2em; text-decoration: none; }
+div.entry-tags { float: right; width: 65%; font-size: .9em; clear: right; line-height: 1; }
+div.entry-tags a { background: #ededed; color: #000; padding: 3px; margin: 0 1px; text-decoration: none; float: right; }
+div.entry-utility { float: left; width: 33%; font-size: .9em; clear: left; line-height: 1; }
+div.entry-utility a { color: #aaa; text-transform: uppercase; text-decoration: none; }
+
+/* Tag List Widget */
+#main .widget-area { font: 12px/1.6 Arial; }
+#main .widget-area ul ul#tag-list-widget { margin: 0; padding: 0; list-style: none; border-top: 1px solid #ccc; font-size: .9; }
+#main .widget-area ul ul#tag-list-widget li { border-bottom: 1px solid #ccc; padding: .2em 0; }
+#main .widget-area ul ul#tag-list-widget li span.count { float: right; }
