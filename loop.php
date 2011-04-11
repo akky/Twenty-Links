@@ -91,6 +91,7 @@
 			<div class="entry-content">
 			<?php if(get_post_type($post) == 'bookmark'){ ?>
 				<a href="<?php echo get_post_meta(get_the_ID(), 'link_url', true) ?>" class="title"><?php the_title(); ?></a>
+				<?php if($desc=get_post_meta(get_the_ID(), 'link_desc', true)) { echo '<div class="description">' . $desc . '</div>'; } ?>
 			<?php }else{ ?>
 				<a href="<?php the_permalink(); ?>" class="title"><?php the_title(); ?></a>
 				<?php the_content(); ?>
