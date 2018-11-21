@@ -20,8 +20,8 @@ get_header(); ?>
 						$thetag = get_term_by('slug', $atag, 'post_tag', ARRAY_A);
 						$taglink = '';
 						$minusthistag = array_diff($tags, array($atag));
-						if (empty($minusthistag)) $taglink = '/';
-						else $taglink = '/tag/'.implode('+', $minusthistag);
+						if (empty($minusthistag)) $taglink = home_url('/');
+						else $taglink = home_url('/tag/'.implode('+', $minusthistag));
 						$tagtitle .= $thetag['name'] . ' <a href="'.$taglink.'" class="remove-tag" title="remove '.$thetag['name'].'">x</a> ';
 					}
 					
