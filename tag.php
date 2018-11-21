@@ -15,6 +15,7 @@ get_header(); ?>
 				<div id="tag-trail">
 					<h1 class="page-title"><?php 
 					$tags = explode('+', $tag);
+					$tagtitle = '';
 					foreach ($tags as $atag) {
 						$thetag = get_term_by('slug', $atag, 'post_tag', ARRAY_A);
 						$taglink = '';
